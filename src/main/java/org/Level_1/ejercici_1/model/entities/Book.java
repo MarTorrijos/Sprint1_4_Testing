@@ -1,4 +1,4 @@
-package org.example.Level_1.ejercici_1.model.entities;
+package org.Level_1.ejercici_1.model.entities;
 
 public class Book {
 

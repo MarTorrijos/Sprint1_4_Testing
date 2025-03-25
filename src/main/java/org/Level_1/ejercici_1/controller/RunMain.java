@@ -1,7 +1,7 @@
-package org.example.Level_1.ejercici_1.controller;
+package org.Level_1.ejercici_1.controller;
 
-import org.example.Level_1.ejercici_1.data.BookInstances;
-import org.example.Level_1.ejercici_1.model.entities.Library;
+import org.Level_1.ejercici_1.data.BookInstances;
+import org.Level_1.ejercici_1.model.entities.Library;
 
 public class RunMain {
 

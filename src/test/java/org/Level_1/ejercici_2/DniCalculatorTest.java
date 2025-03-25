@@ -1,4 +1,4 @@
-package org.example.Level_1.ejercici_2;
+package org.Level_1.ejercici_2;
 
 import org.junit.jupiter.api.Test;
 

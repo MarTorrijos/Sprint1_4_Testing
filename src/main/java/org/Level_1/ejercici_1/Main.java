@@ -1,6 +1,6 @@
-package org.example.Level_1.ejercici_1;
+package org.Level_1.ejercici_1;
 
-import org.example.Level_1.ejercici_1.controller.RunMain;
+import org.Level_1.ejercici_1.controller.RunMain;
 
 public class Main {
 

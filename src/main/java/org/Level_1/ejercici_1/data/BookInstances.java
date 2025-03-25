@@ -1,8 +1,8 @@
-package org.example.Level_1.ejercici_1.data;
+package org.Level_1.ejercici_1.data;
 
-import org.example.Level_1.ejercici_1.model.entities.Book;
+import org.Level_1.ejercici_1.model.entities.Book;
 
-import static org.example.Level_1.ejercici_1.model.entities.Library.getBookList;
+import static org.Level_1.ejercici_1.model.entities.Library.getBookList;
 
 public class BookInstances {
 

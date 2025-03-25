@@ -1,7 +1,7 @@
-package org.example.Level_1.ejercici_1;
+package org.Level_1.ejercici_1;
 
-import org.example.Level_1.ejercici_1.model.entities.Book;
-import org.example.Level_1.ejercici_1.model.entities.Library;
+import org.Level_1.ejercici_1.model.entities.Book;
+import org.Level_1.ejercici_1.model.entities.Library;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -57,14 +57,12 @@ public class LibraryTest {
         assertEquals(book1.getTitle(), Library.getBookList().get(0).getTitle());
     }
 
-    // Afegir un llibre modifica correctament la llista
     @Test
     void modifiedListAfterAddingTitle() {
         Library.addBook("1984");
         assertTrue(Library.getBookList().contains(new Book("1984")), "La lista debería contener '1984'");
     }
 
-    // Eliminar un llibre disminueix la mida de la llista
     @Test
     void listReducedAfterRemovingTitle() {
         Library.removeBook("Dune");
@@ -72,19 +70,8 @@ public class LibraryTest {
         assertFalse(Library.getBookList().contains(new Book("Dune")), "La lista ya no debería contener 'Dune");
     }
 
-    // La llista roman ordenada alfabèticament després d'afegir o eliminar un llibre
     @Test
     void listSortedAfterAddingTitle() {
-//        Library.addBook("Book 1");
-//        Library.addBook("Book 3");
-//        Library.addBook("Book 2");
-//
-//        List<Book> sortedBooks = Library.getBookList();
-//
-//        assertEquals("Book 1", sortedBooks.get(0).getTitle(), "El primer libro debería ser Book 1");
-//        assertEquals("Book 2", sortedBooks.get(1).getTitle(), "El segundo libro debería ser Book 2");
-//        assertEquals("Book 3", sortedBooks.get(2).getTitle(), "El tercer libro debería ser Book 3");
-
         Library.getBookList().clear();
 
         Library.addBook("Book 1");
