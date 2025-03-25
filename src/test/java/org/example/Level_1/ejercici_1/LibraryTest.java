@@ -61,7 +61,7 @@ public class LibraryTest {
     @Test
     void modifiedListAfterAddingTitle() {
         Library.addBook("1984");
-        assertTrue(Library.getBookList().contains(new Book("1984")), "The book list should contain '1984'");
+        assertTrue(Library.getBookList().contains(new Book("1984")), "La lista debería contener '1984'");
     }
 
     // Eliminar un llibre disminueix la mida de la llista
@@ -75,15 +75,33 @@ public class LibraryTest {
     // La llista roman ordenada alfabèticament després d'afegir o eliminar un llibre
     @Test
     void listSortedAfterAddingTitle() {
+//        Library.addBook("Book 1");
+//        Library.addBook("Book 3");
+//        Library.addBook("Book 2");
+//
+//        List<Book> sortedBooks = Library.getBookList();
+//
+//        assertEquals("Book 1", sortedBooks.get(0).getTitle(), "El primer libro debería ser Book 1");
+//        assertEquals("Book 2", sortedBooks.get(1).getTitle(), "El segundo libro debería ser Book 2");
+//        assertEquals("Book 3", sortedBooks.get(2).getTitle(), "El tercer libro debería ser Book 3");
+
+        Library.getBookList().clear();
+
         Library.addBook("Book 1");
         Library.addBook("Book 3");
         Library.addBook("Book 2");
 
-        List<Book> sortedBooks = Library.getBookList();
 
-        assertEquals("Book 1", sortedBooks.get(0).getTitle(), "The first book should be Book 1");
-        assertEquals("Book 2", sortedBooks.get(1).getTitle(), "The second book should be Book 2");
-        assertEquals("Book 3", sortedBooks.get(2).getTitle(), "The third book should be Book 3");
+        assertEquals("Book 1", Library.getBookList().get(0).getTitle());
+        assertEquals("Book 2", Library.getBookList().get(1).getTitle());
+        assertEquals("Book 3", Library.getBookList().get(2).getTitle());
+
+        Library.addBook("Book 4");
+        Library.removeBook("Book 1");
+
+        assertEquals("Book 2", Library.getBookList().get(0).getTitle());
+        assertEquals("Book 3", Library.getBookList().get(1).getTitle());
+        assertEquals("Book 4", Library.getBookList().get(2).getTitle());
     }
 
 }

@@ -1,6 +1,7 @@
 package org.example.Level_1.ejercici_1.model.entities;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class Library {
 
@@ -12,6 +13,7 @@ public class Library {
 
     public static String addBook(String title) {
         bookList.add(new Book(title));
+        bookList.sort(Comparator.comparing(Book::getTitle));
         return "Libro titulado " + title + " añadido\n";
     }
 
@@ -37,7 +39,4 @@ public class Library {
         return "Libro titulado \"" + title + "\" borrado\n";
     }
 
-    public static void sortBooks() {
-        
-    }
 }
